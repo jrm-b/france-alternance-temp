@@ -1,0 +1,41 @@
+:root {
+  --main-font: 'Luciole';
+
+  --spacing-xs: 8px;
+  --spacing-s: 16px;
+  --spacing-m: 24px;
+  --spacing-l: 32px;
+  --spacing-xl: 40px;
+  --spacing-2xl: 48px;
+
+  --brand-color: #0089e6;
+
+  --color-black: #000000;
+  --color-grey-800: #8c8c8c;
+  --color-grey-700: #d1d1d1;
+  --color-grey-600: #dddddd;
+  --color-grey-500: #e8e8e8;
+  --color-grey-400: #f3f3f3;
+  --color-grey-300: #f9f9f9;
+
+  --color-info: #0089e6;
+  --color-success: #50c24e;
+  --color-error: #ff2222;
+  --color-info: #ff6422;
+
+  --text-hero-1: 82px;
+  --text-hero-2: 68px;
+  --heading-1: 60px;
+  --heading-2: 50px;
+  --heading-3: 44px;
+  --heading-4: 34px;
+  --heading-5: 28px;
+  --heading-6: 24px;
+
+  --text-line-height: 1.5em;
+  --heading-line-height: 1.3em;
+}
+
+html {
+  font-family: var(--main-font);
+}

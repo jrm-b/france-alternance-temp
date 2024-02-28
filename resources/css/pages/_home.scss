@@ -1,0 +1,40 @@
+h2 {
+  font-size: var(--heading-2);
+}
+.header-left {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  justify-content: start;
+  height: 100%;
+}
+
+#hero-banner {
+  height: calc(100vh - 60px);
+  width: 100vw;
+}
+.hero-banner-container-top {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .user-infos-container {
+    border: 2px solid #3333;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+
+    button {
+    }
+  }
+}
+
+.hero-banner-container-bot {
+  height: 50%;
+  width: 100%;
+  background-color: var(--brand-color);
+}

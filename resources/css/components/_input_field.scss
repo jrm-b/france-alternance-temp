@@ -1,0 +1,102 @@
+.input-text-field,
+.input-email-field,
+.input-password-field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 2em;
+
+  input {
+    height: 52px;
+    border-radius: 5px;
+    padding: 0.4em 0.8em;
+    border: 1px solid #333;
+
+    &:not(:active):not(:focus):not(:valid)::placeholder {
+      color: transparent;
+    }
+
+    &:hover {
+      border-color: #3333;
+    }
+
+    &:invalid,
+    &:focus:invalid {
+      border: 2px solid var(--color-error);
+      color: var(--color-error);
+
+      ~ span {
+        color: var(--color-error);
+      }
+    }
+
+    &:active,
+    &:focus,
+    &:valid {
+      border: 2px solid var(--brand-color);
+      color: var(--brand-color);
+
+      ~ span {
+        color: var(--brand-color);
+        font-size: 1em;
+        transform: translateY(-1.45em) translateX(0.6em);
+        width: auto;
+        padding-inline: 0.5em;
+      }
+    }
+  }
+  span {
+    position: absolute;
+    top: 0.75em;
+    left: 0.2em;
+    font-size: 1.125em;
+    background-color: #fff;
+    margin-left: 0.5em;
+    pointer-events: none;
+    color: var(--color-grey-800);
+    transition: 0.2s ease-in-out;
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  border-color: var(--brand-color) !important;
+  ~ span {
+    background-color: var(--brand-color);
+    color: #fff !important;
+    border-radius: 4px;
+  }
+}
+
+input:not(:placeholder-shown):invalid {
+  ~ span {
+    color: var(--color-error);
+    font-size: 1em;
+    transform: translateY(-1.45em) translateX(0.6em);
+    width: auto;
+    padding-inline: 0.5em;
+  }
+}
+
+.input-checkbox-field {
+  input {
+    width: 19px;
+    height: 19px;
+    cursor: pointer;
+    margin-left: 0.125em;
+    vertical-align: sub;
+    border: 1px solid #3333;
+    border-radius: none;
+    background-color: var(--brand-color);
+
+    ~ span,
+    ~ span label {
+      color: #333;
+      cursor: pointer;
+      padding-left: 0.25em;
+    }
+  }
+}

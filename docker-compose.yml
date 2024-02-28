@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  database:
+    container_name: mariadb_france_alternance
+    image: mariadb:latest
+    restart: unless-stopped
+    ports:
+      - 3306:3306
+    volumes:
+      - data:/var/lib/mysql
+    environment:
+      MARIADB_USER: root
+      MARIADB_ROOT_PASSWORD: root
+      MARIADB_DATABASE: france_alternance
+
+volumes:
+  data:
